@@ -6,8 +6,9 @@ import { fetchMetrics } from './metrics';
 await fetchMetrics();
 
 if (config.cron) {
-  // Run every hour
-  cron.schedule('0 * * * *', async () => {
+  // Run every 5 mins
+  const cronTime = '*/1 * * * *';
+  cron.schedule(cronTime, async () => {
     await fetchMetrics();
   });
 }
