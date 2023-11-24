@@ -1,0 +1,21 @@
+{
+  "name": "railway-metrics-bridge",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun --revision && bun run --smol src/index.ts",
+    "dev": "bun --hot run src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node-cron": "^3.0.11",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@axiomhq/js": "^1.0.0-rc.1",
+    "graphql-request": "^6.1.0",
+    "node-cron": "^3.0.3"
+  }
+}
